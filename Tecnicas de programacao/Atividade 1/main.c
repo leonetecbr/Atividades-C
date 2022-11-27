@@ -11,31 +11,39 @@ typedef struct {
 } Veiculo;
 
 void mostrarVeiculo(Veiculo veiculo, int indice) {
-    printf("Veiculo %d\n", indice);
+    printf("Veiculo %d\n", indice + 1);
     printf("    Marca: %s\n", veiculo.marca);
     printf("    Modelo: %s\n", veiculo.modelo);
     printf("    Ano: %d\n", veiculo.ano);
     printf("    Placa: %s\n", veiculo.placa);
 
     if (indice != 9) printf("\n");
+
+    return;
 }
 
 void listarVeiculosPorModelo(Veiculo veiculos[10], char modelo[10]) {
     for (int i = 0; i < 10; i++) {
         if (veiculos[i].modelo == modelo) mostrarVeiculo(veiculos[i], i);
     }
+
+    return;
 }
 
 void listarVeiculosAPartirDoAno(Veiculo veiculos[10], int ano) {
     for (int i = 0; i < 10; i++) {
         if (veiculos[i].ano >= ano) mostrarVeiculo(veiculos[i], i);
     }
+
+    return;
 }
 
 void listarVeiculosPorAno(Veiculo veiculos[10], int ano) {
     for (int i = 0; i < 10; i++) {
         if (veiculos[i].ano == ano) mostrarVeiculo(veiculos[i], i);
     }
+
+    return;
 }
 
 void inserirVeiculo(Veiculo carros[10]) {
@@ -61,10 +69,14 @@ void inserirVeiculo(Veiculo carros[10]) {
     }
 
     printf("\nVeiculo inserido com sucesso!");
+
+    return;
 }
 
 void listarVeiculos(Veiculo veiculos[10]) {
     for (int i = 0; i < 10; i++) mostrarVeiculo(veiculos[i], i);
+
+    return;
 }
 
 int question(void) {
